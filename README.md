@@ -1,66 +1,78 @@
 # PULSE – Vibration Monitoring System
 
 ## Overview
-PULSE is an open-source system for monitoring vibrations in urban and mining environments.  
-It is designed to be low-cost, scalable, and capable of continuous data acquisition, processing, and visualization.
 
-## Objectives
-- Monitor vibration levels in real time  
-- Support structural safety assessment  
-- Evaluate environmental impact  
-- Improve control of mining and urban operations  
+PULSE is an open-source vibration monitoring system designed for urban, industrial and mining environments.
 
-## System Architecture
+The system acquires vibration data using an accelerometer, processes the signal, evaluates environmental vibration levels according to established standards and identifies potential seismic events.
 
-The system is divided into two main components:
+---
 
-### Hardware
-Responsible for capturing vibration data:
-- Geophone (vibration sensor)
-- Signal amplifier (AD620)
-- Analog-to-Digital Converter (ADC)
-- Raspberry Pi (data acquisition unit)
+## Main Features
 
-### Software
-Responsible for processing and analyzing data:
+- Continuous vibration monitoring
+- Environmental vibration assessment
+- Seismic event detection
+- Open-source architecture
+- Modular software design
 
-#### Modules:
-- **Acquisition** → Reads incoming data (JSON format)  
-- **Processing** → Signal filtering and analysis  
-- **Interpretation** → Detection of anomalies and events  
-- **Visualization** → Generation of graphs and images  
+---
 
+## Operating Modes
 
-## Data Flow
-1. Sensor captures vibration signal  
-2. Signal is converted to digital data (ADC)  
-3. Data is structured in JSON format  
-4. Software reads and processes the data  
-5. Results are interpreted and visualized  
+### Environmental Mode
+
+Evaluates vibration levels according to technical standards such as:
+
+- NP 2074
+- DIN 4150
+(Meter as restantes normas)
+### Seismic Mode
+
+Analyzes vibration signals to identify possible seismic events.
+(dizer quais os criterios usados)
+---
+
+## System Workflow
+
+Accelerometer
+↓
+ADC
+↓
+CSV Data
+↓
+Acquisition
+↓
+Processing
+↓
+Interpretation
+↓
+Visualization
+
+---
+
+## Repository Structure
+
+- hardware → Physical components and assembly
+- software → Signal processing pipeline
+- docs → Technical documentation
+- data → Raw and processed datasets
+
+---
 
 ## Technologies
-- Python  
-- Raspberry Pi  
-- Analog sensors (geophone)  
-- Signal processing techniques
-  
 
-## 📚 Documentation
-Detailed technical documentation is available in the `/docs` folder.
+- Python
+- Raspberry Pi
+- Accelerometer (referencia)
+- Signal Processing
+- CSV Data Handling
 
+---
 
-## Open-Source Approach
-This project is developed as an open-source solution, allowing:
-- Reproducibility  
-- Collaboration  
-- Future scalability  
+## Future Developments
 
-
-## Future Work
-- Real-time monitoring dashboard  
-- Integration with IoT networks  
-- Automated alert system  
-
-
-## Authors
-Project developed within the scope of the Integrated Project in Mining Engineering.
+- IoT integration
+- Real-time dashboard
+- Cloud-based monitoring
+- Multi-node sensor network
